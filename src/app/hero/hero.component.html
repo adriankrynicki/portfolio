@@ -1,64 +1,100 @@
-<section class="hero">
+<section>
   <!-- Navigation Bar -->
   <nav class="nav">
-    <div class="nav__left">
+    <div class="nav-left">
       <!-- Language Toggle -->
       <button class="language-toggle">
-        <span class="active">EN</span>
-        <span>DE</span>
+        <span
+          [class.active]="(translationService.currentLang$ | async) === 'en'"
+          (click)="toggleLanguage('en')"
+          >EN</span
+        >
+        <span
+          [class.active]="(translationService.currentLang$ | async) === 'de'"
+          (click)="toggleLanguage('de')"
+          >DE</span
+        >
       </button>
-      
+
       <!-- Navigation Links -->
-      <div class="nav__links">
-        <a href="#about">About me</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
+      <div class="nav-links">
+        <a href="#about">{{ translate("about") }}</a>
+        <a href="#skills">{{ translate("skills") }}</a>
+        <a href="#projects">{{ translate("projects") }}</a>
       </div>
     </div>
 
     <!-- Logo -->
-    <div class="nav__right">
-      <img src="assets/img/logo.png" alt="Logo" class="logo">
+    <div class="nav-right">
+      <img src="assets/img/logo3.png" alt="Logo" class="logo" />
+      <div class="logo-text mulish-font">
+        <span>Adrian</span>
+        <span>Krynicki</span>
+      </div>
     </div>
   </nav>
 
   <!-- Main Content -->
-  <div class="hero__content">
-    <h2 class="hero__subtitle">Frontend Developer</h2>
-    <h1 class="hero__title">Adrian Krynicki</h1>
-    
+  <div class="hero-content">
+    <h2 class="hero-subtitle">{{ translate("role") }}</h2>
+    <h1 class="hero-title">Adrian Krynicki</h1>
+
     <!-- Call to Action Buttons -->
-    <div class="hero__buttons">
-      <button class="btn btn--primary">Check my work</button>
-      <button class="btn btn--secondary">Contact me</button>
+    <div class="hero-buttons">
+      <button class="btn btn--primary">{{ translate("checkMyWork") }}</button>
+      <button class="btn btn--secondary">{{ translate("contactMe") }}</button>
     </div>
   </div>
 
   <!-- Side Email -->
   <div class="side-email">
-    <a href="mailto:your.email@mail.com" class="vertical-text">your.email@mail.com</a>
+    <a href="mailto:adrian.krynicki88&#64;gmail.com" class="vertical-text"
+      >adrian.krynicki88&#64;gmail.com</a
+    >
   </div>
 
   <!-- Social Links -->
   <div class="social-links">
-    <a href="https://github.com/yourusername" target="_blank" class="social-link">
+    <a
+      href="https://github.com/adriankrynicki"
+      target="_blank"
+      class="social-link"
+    >
       <i class="fab fa-github"></i>
     </a>
-    <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link">
+    <a
+      href="https://linkedin.com/in/adriankrynicki"
+      target="_blank"
+      class="social-link"
+    >
       <i class="fab fa-linkedin"></i>
     </a>
   </div>
 
-  <!-- Scrolling Info Bar -->
   <div class="info-bar">
-    <div class="info-bar__content">
-      <span>Available for remote work</span>
-      <span class="separator">•</span>
-      <span>Frontend Developer</span>
-      <span class="separator">•</span>
-      <span>Based in Munich</span>
-      <span class="separator">•</span>
-      <span>Open to opportunities</span>
+    <div class="info-bar-wrapper" #scrollWrapper>
+      <div class="info-bar-content" #scrollContent>
+        <span class="separator">•</span>
+        <span>{{ translate("availableForRemoteWork") }}</span>
+        <span class="separator">•</span>
+        <span>{{ translate("frontendDeveloper") }}</span>
+        <span class="separator">•</span>
+        <span>{{ translate("basedInFrankfurt") }}</span>
+        <span class="separator">•</span>
+        <span>{{ translate("openToOpportunities") }}</span>
+      </div>
+      <!-- Duplicate für nahtlosen Übergang -->
+      <div class="info-bar-content">
+        <span class="separator">•</span>
+        <span>{{ translate("availableForRemoteWork") }}</span>
+        <span class="separator">•</span>
+        <span>{{ translate("frontendDeveloper") }}</span>
+        <span class="separator">•</span>
+        <span>{{ translate("basedInFrankfurt") }}</span>
+        <span class="separator">•</span>
+        <span>{{ translate("openToOpportunities") }}</span>
+        <span class="separator">•</span>
+      </div>
     </div>
   </div>
 </section>

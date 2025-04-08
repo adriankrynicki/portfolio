@@ -30,7 +30,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/fonts/roboto/roboto.css",
+              "src/assets/fonts/mulish/mulish.css"
             ],
             "scripts": []
           },
