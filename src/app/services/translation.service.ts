@@ -47,7 +47,7 @@ export class TranslationService {
         contactMe: 'Kontaktiere mich',
         availableForRemoteWork: 'Verfügbar für Remote-Arbeit',
         frontendDeveloper: 'Frontend Entwickler',
-        basedInFrankfurt: 'ansässig in Frankfurt am Main',
+        basedInFrankfurt: 'Ansässig in Frankfurt am Main',
         openToOpportunities: 'Offen für Möglichkeiten',
       },
       skills: {
