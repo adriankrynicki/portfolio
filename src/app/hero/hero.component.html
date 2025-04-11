@@ -16,26 +16,27 @@
         >
       </button>
 
-      <!-- Navigation Links -->
       <div class="nav-links">
-        <a href="#about">{{ translate("about") }}</a>
-        <a href="#skills">{{ translate("skills") }}</a>
-        <a href="#projects">{{ translate("projects") }}</a>
+        <div class="nav-link-container">
+          <a href="#about">{{ translate("about") }}</a>
+          <div class="radio-dash"></div>
+        </div>
+        <div class="nav-link-container">
+          <a href="#skills">{{ translate("skills") }}</a>
+          <div class="radio-dash"></div>
+        </div>
+        <div class="nav-link-container">
+          <a href="#projects">{{ translate("projects") }}</a>
+          <div class="radio-dash"></div>
+        </div>
       </div>
     </div>
 
-    <!-- Logo -->
-    <div class="nav-right">
-      <img src="assets/img/logo3.png" alt="Logo" class="logo" />
-      <div class="logo-text mulish-font">
-        <span>Adrian</span>
-        <span>Krynicki</span>
-      </div>
-    </div>
+    <div class="logo"></div>
   </nav>
 
-    <div class="left-lateral">
-    <img src="assets/img/downVector.png" alt="arrow down" />
+  <div class="left-lateral">
+    <div class="down-vector"></div>
     <div class="straight-left-line"></div>
   </div>
   <!-- Main Content -->
@@ -46,21 +47,36 @@
 
       <!-- Call to Action Buttons -->
       <div class="hero-buttons">
-        <button class="btn">{{ translate("checkMyWork") }}</button>
-        <button class="btn">{{ translate("contactMe") }}</button>
+        <button class="btn">
+          <div class="btn-content-wrapper">
+            <span>{{ translate("checkMyWork") }}</span>
+            <span>{{ translate("checkMyWork") }}</span>
+          </div>
+        </button>
+        <button class="btn">
+          <div class="btn-content-wrapper">
+            <span>{{ translate("contactMe") }}</span>
+            <span>{{ translate("contactMe") }}</span>
+          </div>
+        </button>
       </div>
     </div>
   </div>
 
-  <!-- Side Email -->
   <div class="right-lateral">
     <div class="side-email">
       <a href="mailto:adrian.krynicki88&#64;gmail.com"
         >adrian.krynicki88&#64;gmail.com</a
       >
     </div>
-    <div class="social-icon github" alt="github"></div>
-    <div class="social-icon linkedin" alt="linkedin"></div>
+    <div class="social-container">
+      <div class="social-icon github" alt="github"></div>
+      <div class="radio-dash"></div>
+    </div>
+    <div class="social-container">
+      <div class="social-icon linkedin" alt="linkedin"></div>
+      <div class="radio-dash"></div>
+    </div>
     <div class="straight-right-line"></div>
   </div>
 

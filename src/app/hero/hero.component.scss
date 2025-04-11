@@ -1,5 +1,5 @@
 // Variables
-$primary-color: #3DCFB6;
+$primary-color: #3dcfb6;
 $background-dark: #1a1a1a;
 $text-color: #ffffff;
 $gradient-dark: linear-gradient(to bottom left, #08463b 45%, #1c1c1c 55%);
@@ -63,13 +63,6 @@ section {
     color: $text-color;
     text-decoration: none;
     transition: color 0.3s ease;
-
-    &:hover {
-      color: $primary-color;
-    }
-  }
-  img {
-    height: 48px;
   }
 }
 
@@ -85,6 +78,55 @@ section {
   gap: 24px;
 }
 
+// Nav Links
+.nav-link-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+
+  .radio-dash {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    opacity: 0;
+    background-image: url("/assets/img/radioDash.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    .radio-dash {
+      opacity: 1;
+    }
+  }
+}
+
+// Social Icons
+.social-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .radio-dash {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    opacity: 0;
+    background-image: url("/assets/img/radioDash.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    .radio-dash {
+      opacity: 1;
+    }
+  }
+}
+
 // Language Toggle
 .language-toggle {
   display: flex;
@@ -95,10 +137,15 @@ section {
   border-radius: 20px;
   color: $text-color;
   cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  margin-bottom: 14px;
+
+  &:hover {
+    border: 1px solid $text-color;
+  }
 
   span {
     padding: 4.5px 12px;
-    opacity: 0.5;
     color: $primary-color;
     transition: opacity 0.3s ease;
 
@@ -121,11 +168,13 @@ section {
   justify-content: space-around;
   text-align: center;
   z-index: 3;
+  font-family: "Karla", sans-serif;
 
   h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     opacity: 0.8;
+    font-family: "Karla", sans-serif;
   }
 
   h1 {
@@ -136,39 +185,47 @@ section {
   }
 }
 
-// Buttons
 .hero-buttons {
   display: flex;
   gap: 1rem;
   justify-content: center;
 
   .btn {
-    padding: 0.8rem 2rem;
+    padding: 16px 0;
+
     border-radius: 25px;
-    border: none;
+    border: 1px solid $text-color;
+    background: transparent;
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 500;
-
-    &--primary {
-      background: $primary-color;
-      color: $background-dark;
-
-      &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(0, 255, 194, 0.3);
+    overflow: hidden;
+    position: relative;
+    
+    .btn-content-wrapper {
+      display: flex;
+      transition: transform 0.15s ease-in-out;
+      
+      span {
+        flex-shrink: 0;
+        width: 100%;
+        color: $text-color;
+        font-weight: 500;
       }
     }
 
-    &--secondary {
-      background: transparent;
-      border: 1px solid $primary-color;
-      color: $primary-color;
-
-      &:hover {
-        background: rgba(0, 255, 194, 0.1);
+    &:hover {
+      .btn-content-wrapper {
+        animation: slideText 1.5s linear infinite;
       }
     }
+  }
+}
+
+@keyframes slideText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
 
@@ -183,45 +240,63 @@ section {
   justify-content: center;
   gap: 24px;
 
+  .down-vector {
+    width: 30px;
+    height: 48px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("/assets/img/downVector.png");
+    transition: all 0.15s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      background-image: url("/assets/img/downVectorMove.png");
+      transform: translateY(10px);
+    }
+  }
+
   .straight-left-line {
     width: 1px;
     height: 26vh;
     background-color: $text-color;
   }
-
 }
 
 .right-lateral {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: -20px;
   z-index: 3;
   display: flex;
   gap: 24px;
   flex-direction: column;
   align-items: center;
+  .social-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
   .straight-right-line {
     width: 1px;
     height: 22vh;
     background-color: $text-color;
-   
+    margin-right: 10px;
   }
   .side-email {
     height: 222px;
     display: flex;
     align-items: center;
     justify-content: center;
-    >a {
+    margin-right: 13px;
+    > a {
       z-index: 3;
       transform: rotate(-90deg);
       color: $text-color;
       text-decoration: none;
       font-size: 18px;
-      opacity: 0.7;
-      transition: opacity 0.3s ease;
-  
+      transition: opacity 0.15s ease-in-out;
+
       &:hover {
-        opacity: 1;
         color: $primary-color;
       }
     }
@@ -240,16 +315,16 @@ section {
 }
 
 .github {
-  background-image: url('/assets/img/githubVectorTurquoise.png');
+  background-image: url("/assets/img/githubVectorTurquoise.png");
   &:hover {
-    background-image: url('/assets/img/githubVectorWhite.png');
+    background-image: url("/assets/img/githubVectorWhite.png");
   }
 }
 
 .linkedin {
-  background-image: url('/assets/img/linkedinVectorTurquoise.png');
+  background-image: url("/assets/img/linkedinVectorTurquoise.png");
   &:hover {
-    background-image: url('/assets/img/linkedinVectorWhite.png');
+    background-image: url("/assets/img/linkedinVectorWhite.png");
   }
 }
 
@@ -269,16 +344,16 @@ section {
   color: $primary-color;
   font-weight: 400;
   font-size: 32px;
-  
+
   &-wrapper {
     display: flex;
     white-space: nowrap;
   }
-  
+
   &-content {
     display: flex;
     gap: 54px;
-    padding-right: 54px; 
+    padding-right: 54px;
   }
 }
 
@@ -291,20 +366,18 @@ section {
   }
 }
 
+.logo {
+  z-index: 3;
+  height: 48px;
+  width: 158px;
+  background-image: url("/assets/img/logoAK.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.15s ease-in-out;
 
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  font-size: 20px;
-  font-weight: 600;
-  font-style: italic;
+  &:hover {
+    cursor: pointer;
+    background-image: url("/assets/img/logoAKHollow.png");
+  }
 }
-
-.nav-right {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-}
-
