@@ -15,3 +15,25 @@
   font-family: 'Karla', sans-serif;
 }
 
+.fira-code-font {
+  font-family: 'Fira Code', sans-serif;
+}
+
+.cursor-glow {
+  position: fixed;
+  width: 150px; 
+  height: 150px; 
+  background: radial-gradient(circle, 
+    rgba(61, 207, 182, 0.3) 0%,    // Mehr Opacity
+    rgba(61, 207, 182, 0.15) 25%,  // Angepasste Werte
+    rgba(61, 207, 182, 0.05) 50%,  // Angepasste Werte
+    rgba(61, 207, 182, 0) 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  mix-blend-mode: screen;
+  filter: blur(40px); // Blur-Effekt hinzufügen
+}
+

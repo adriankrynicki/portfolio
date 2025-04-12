@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { TranslationService } from '../services/translation.service';
 import { Language } from '../types/translation.type';
 import { HeroTranslations } from '../types/translation.type';
+import { CursorGlowService } from '../services/cursor_glow.service';
 
 @Component({
   selector: 'app-hero',
@@ -21,20 +22,26 @@ import { HeroTranslations } from '../types/translation.type';
 export class HeroComponent implements AfterViewInit, OnDestroy {
   @ViewChild('scrollWrapper') scrollWrapper!: ElementRef;
   @ViewChild('scrollContent') scrollContent!: ElementRef;
+  @ViewChild('cursorGlow') cursorGlow!: ElementRef;
   private animationFrameId: number = 0;
   private scrollPosition: number = 0;
   private readonly scrollSpeed: number = 3; // Pixels pro Frame
 
-  constructor(public translationService: TranslationService) {}
+  constructor(
+    public translationService: TranslationService,
+    private cursorGlowService: CursorGlowService
+  ) {}
 
   ngAfterViewInit() {
     this.startScrollAnimation();
+    this.cursorGlowService.initializeCursor(this.cursorGlow);
   }
 
   ngOnDestroy() {
     if (this.animationFrameId) {
       cancelAnimationFrame(this.animationFrameId);
     }
+    this.cursorGlowService.cleanup();
   }
 
   private startScrollAnimation() {

@@ -1,4 +1,5 @@
 <section>
+  <div class="cursor-glow" #cursorGlow></div>
   <!-- Navigation Bar -->
   <nav class="nav">
     <div class="nav-left">
@@ -36,7 +37,9 @@
   </nav>
 
   <div class="left-lateral">
-    <div class="down-vector"></div>
+    <div class="down-vector">
+      <img src="assets/img/vectorDown.png" alt="downVector" />
+    </div>
     <div class="straight-left-line"></div>
   </div>
   <!-- Main Content -->
@@ -47,13 +50,13 @@
 
       <!-- Call to Action Buttons -->
       <div class="hero-buttons">
-        <button class="btn">
+        <button class="btn width-188">
           <div class="btn-content-wrapper">
             <span>{{ translate("checkMyWork") }}</span>
             <span>{{ translate("checkMyWork") }}</span>
           </div>
         </button>
-        <button class="btn">
+        <button class="btn width-150">
           <div class="btn-content-wrapper">
             <span>{{ translate("contactMe") }}</span>
             <span>{{ translate("contactMe") }}</span>

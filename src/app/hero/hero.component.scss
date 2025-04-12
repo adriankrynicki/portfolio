@@ -60,6 +60,9 @@ section {
   z-index: 3;
 
   a {
+    font-family: "Fira Code", monospace;
+    font-size: 20px;
+    font-weight: 400;
     color: $text-color;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -138,7 +141,7 @@ section {
   color: $text-color;
   cursor: pointer;
   transition: all 0.15s ease-in-out;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 
   &:hover {
     border: 1px solid $text-color;
@@ -168,20 +171,18 @@ section {
   justify-content: space-around;
   text-align: center;
   z-index: 3;
-  font-family: "Karla", sans-serif;
 
   h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    opacity: 0.8;
-    font-family: "Karla", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    font-family: "Fira Code", monospace;
   }
 
   h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    letter-spacing: 2px;
+    font-family: "Karla", sans-serif;
+    font-size: 128px;
+    font-weight: 700;
+    margin-bottom: 40px;
   }
 }
 
@@ -191,24 +192,25 @@ section {
   justify-content: center;
 
   .btn {
-    padding: 16px 0;
-
+    padding: 13px 0;
     border-radius: 25px;
     border: 1px solid $text-color;
     background: transparent;
     cursor: pointer;
     overflow: hidden;
     position: relative;
-    
+
     .btn-content-wrapper {
       display: flex;
       transition: transform 0.15s ease-in-out;
-      
+
       span {
         flex-shrink: 0;
         width: 100%;
         color: $text-color;
-        font-weight: 500;
+        font-weight: 400;
+        font-family: "Karla", sans-serif;
+        font-size: 18px;
       }
     }
 
@@ -218,6 +220,14 @@ section {
       }
     }
   }
+}
+
+.width-150 {
+  width: 145px;
+}
+
+.width-188 {
+  width: 170px;
 }
 
 @keyframes slideText {
@@ -233,7 +243,7 @@ section {
   position: absolute;
   bottom: 0;
   left: 95px;
-  z-index: 3;
+  z-index: 4;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -241,17 +251,37 @@ section {
   gap: 24px;
 
   .down-vector {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
     width: 30px;
     height: 48px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url("/assets/img/downVector.png");
-    transition: all 0.15s ease-in-out;
+    border: 1px solid $primary-color;
+    border-radius: 20px;
+    background-color: transparent;
+    > img {
+      margin-top: 10px;
+      width: 15px;
+      height: 20px;
+      transition: transform 0.15s ease-in-out;
+      animation: floatingArrow 1.5s ease-in-out infinite;
+    }
+
     &:hover {
       cursor: pointer;
-      background-image: url("/assets/img/downVectorMove.png");
+      transform: scale(1.2);
+    }
+  }
+
+  @keyframes floatingArrow {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
       transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0);
     }
   }
 
@@ -379,5 +409,16 @@ section {
   &:hover {
     cursor: pointer;
     background-image: url("/assets/img/logoAKHollow.png");
+  }
+}
+
+@media (max-height: 768px) {
+  .hero-content {
+    h1 {
+      font-size: 100px;
+    }
+    h2 {
+      font-size: 30px;
+    }
   }
 }
