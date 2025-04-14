@@ -1,4 +1,4 @@
-<section>
+<section id="hero">
   <div class="cursor-glow" #cursorGlow></div>
   <!-- Navigation Bar -->
   <nav class="nav">
@@ -19,7 +19,7 @@
 
       <div class="nav-links">
         <div class="nav-link-container">
-          <a href="#about">{{ translate("about") }}</a>
+          <a (click)="scrollToAboutMe()">{{ translate("about") }}</a>
           <div class="radio-dash"></div>
         </div>
         <div class="nav-link-container">
@@ -37,7 +37,7 @@
   </nav>
 
   <div class="left-lateral">
-    <div class="down-vector">
+    <div class="down-vector" (click)="scrollToAboutMe()">
       <img src="assets/img/vectorDown.png" alt="downVector" />
     </div>
     <div class="straight-left-line"></div>

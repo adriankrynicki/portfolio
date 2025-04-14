@@ -1,5 +1,5 @@
 export type Language = 'de' | 'en';
-export type Section = 'hero' | 'skills' | 'projects';
+export type Section = 'hero' | 'skills' | 'projects' | 'aboutMe';
 
 // Definiere die Struktur für jede Sektion
 export interface HeroTranslations {
@@ -15,6 +15,15 @@ export interface HeroTranslations {
   openToOpportunities: string;
 }
 
+export interface AboutMeTranslations {
+  whoIAm: string;
+  aboutMeHeader: string;
+  aboutText: string;
+  location: string;
+  mindset: string;
+  approach: string;
+}
+
 export interface SkillsTranslations {
   // Füge hier Skills-spezifische Übersetzungskeys hinzu
 }
@@ -27,11 +36,13 @@ export interface ProjectsTranslations {
 export interface Translations {
   en: {
     hero: HeroTranslations;
+    aboutMe: AboutMeTranslations;
     skills: SkillsTranslations;
     projects: ProjectsTranslations;
   };
   de: {
     hero: HeroTranslations;
+    aboutMe: AboutMeTranslations;
     skills: SkillsTranslations;
     projects: ProjectsTranslations;
   };

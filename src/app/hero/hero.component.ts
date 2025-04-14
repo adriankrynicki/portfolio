@@ -70,4 +70,11 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
   translate(key: keyof HeroTranslations): string {
     return this.translationService.getTranslation('hero', key);
   }
+
+  scrollToAboutMe() {
+    const aboutMeElement = document.getElementById('about');
+    if (aboutMeElement) {
+      aboutMeElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

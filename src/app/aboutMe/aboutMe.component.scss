@@ -1,0 +1,141 @@
+@import '../../styles.scss';
+
+section {
+  min-height: 100vh;
+  background-color: $background-dark;
+  color: $text-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 96px;
+  padding: 96px 96px;
+}
+
+
+.about-header {
+  margin-bottom: 48px;
+  
+  h2 {
+    color: $primary-color;
+    font-size: 24px;
+    font-family: "Fira Code", monospace;
+  }
+}
+
+.about-content {
+  display: flex;
+  margin-bottom: 48px;
+}
+
+.profile-image {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 568px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: repeating-linear-gradient(
+      45deg,
+      $primary-color,
+      $primary-color 2px,
+      transparent 2px,
+      transparent 42px
+    );
+    transition: left 0.3s ease;
+  }
+
+  &:hover {
+
+    &::before {
+      left: 0;
+    }
+  }
+}
+
+.about-text {
+  margin-top: 48px;
+}
+
+.about-text-container {
+  flex: 1;
+}
+
+.about-box {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+  
+  h3 {
+    font-family: "Karla", sans-serif;
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  
+  p {
+    font-family: "Fira Code", monospace;
+    line-height: 1.6;
+  }
+}
+
+.info-points {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  
+  .info-icon {
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  p {
+    flex: 1;
+    font-family: "Fira Code", monospace;
+    line-height: 1.6;
+  }
+}
+
+.location {
+  background-image: url('/assets/img/location-icon.png');
+}
+
+.mindset {
+  background-image: url('/assets/img/mindset-icon.png');
+}
+
+.approach {
+  background-image: url('/assets/img/approach-icon.png');
+}
+
+@media (max-height: 768px) {
+  .profile-image {
+    img {
+      width: 500px;
+    }
+  }
+}
