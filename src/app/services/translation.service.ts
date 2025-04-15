@@ -32,7 +32,7 @@ export class TranslationService {
         openToOpportunities: 'Open to opportunities',
       },
       aboutMe: {
-        whoIAm: 'Who I am',
+        whoIAm: 'Who I Am',
         aboutMeHeader: 'About me',
         aboutText:
           "Hi there, I'm Adrian! My journey began with a childhood fascination for computers and the joy of making things work. This passion has led me to dive deep into web development, where every debugging success brings that rewarding feeling of achievement.",

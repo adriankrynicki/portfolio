@@ -1,30 +1,27 @@
-@import '../../styles.scss';
+@import "../../styles.scss";
 
 section {
   min-height: 100vh;
   background-color: $background-dark;
   color: $text-color;
   display: flex;
-  align-items: center;
   justify-content: center;
   gap: 96px;
   padding: 96px 96px;
 }
 
-
-.about-header {
-  margin-bottom: 48px;
-  
-  h2 {
-    color: $primary-color;
-    font-size: 24px;
-    font-family: "Fira Code", monospace;
-  }
-}
-
 .about-content {
   display: flex;
-  margin-bottom: 48px;
+  align-items: baseline;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 80px;
+  width: 35vw;
+  height: 75vh;
 }
 
 .profile-image {
@@ -32,10 +29,12 @@ section {
   justify-content: flex-end;
   position: relative;
   overflow: hidden;
+  width: 37vw;
+  height: 80vh;
 
   img {
-    width: 568px;
-    height: auto;
+    width: 35vw;
+    height: 75vh;
     display: block;
     border-radius: 8px;
     position: relative;
@@ -44,98 +43,120 @@ section {
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: -100%;
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
     z-index: 1;
+    border-radius: 30px;
     background: repeating-linear-gradient(
       45deg,
       $primary-color,
-      $primary-color 2px,
-      transparent 2px,
-      transparent 42px
+      $primary-color 1px,
+      transparent 1px,
+      transparent 32px
     );
-    transition: left 0.3s ease;
+    transition: left 0.05s ease-in-out;
   }
 
   &:hover {
-
     &::before {
-      left: 0;
+      left: 1%;
     }
   }
 }
 
-.about-text {
-  margin-top: 48px;
+.about-header {
+  h2 {
+    color: $primary-color;
+    font-size: 24px;
+    font-family: "Karla", sans-serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
 }
 
 .about-text-container {
-  flex: 1;
+  background-color: $background-dialog-green;
+  border-radius: 30px;
+  border: 1px solid $primary-color;
 }
 
-.about-box {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  padding: 24px;
-  margin-bottom: 32px;
-  
+.about-me-header {
+  padding: 16px 32px 32px 32px;
   h3 {
-    font-family: "Karla", sans-serif;
-    font-size: 32px;
-    margin-bottom: 16px;
-  }
-  
-  p {
+    color: $primary-color;
+    font-size: 64px;
     font-family: "Fira Code", monospace;
-    line-height: 1.6;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  p {
+    font-family: "Karla", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 120%;
+    color: #cecece;
+    word-spacing: 2px;
   }
 }
 
 .info-points {
+  padding: 0 32px 32px 17px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
+  p {
+    font-family: "Karla", sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 120%;
+    word-spacing: 1px;
+    color: #adadad;
+    text-wrap: wrap;
+    &:hover {
+      color: #cecece;
+      cursor: default;
+    }
+  }
 }
 
 .info-item {
   display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  
-  .info-icon {
-    width: 24px;
-    height: 24px;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  
-  p {
-    flex: 1;
-    font-family: "Fira Code", monospace;
-    line-height: 1.6;
+  gap: 24px;
+  img {
+    width: 32px;
+    height: 32px;
   }
 }
 
-.location {
-  background-image: url('/assets/img/location-icon.png');
-}
-
-.mindset {
-  background-image: url('/assets/img/mindset-icon.png');
-}
-
-.approach {
-  background-image: url('/assets/img/approach-icon.png');
-}
-
-@media (max-height: 768px) {
+@media (max-height: 800px) {
+  .about-text {
+    margin-top: 40px;
+  }
   .profile-image {
-    img {
-      width: 500px;
+    width: 40vw;
+    height: 76vh;
+    > img {
+      width: 38vw;
+      height: 72vh;
+    }
+  }
+  .about-me-header {
+    padding: 16px 32px 16px 32px;
+    >h3 {
+      font-size: 54px;
+      margin-bottom: 20px;
+    }
+    >p {
+      font-size: 16px;
+    }
+    .info-points {
+      >p {
+        font-size: 16px;
+      }
     }
   }
 }
