@@ -44,7 +44,13 @@ export class TranslationService {
           "My approach combines analytical thinking with creative problem-solving. Through collaborative team projects, I've learned to persist until finding the most elegant solution. Each challenge is an opportunity to grow and refine my development skills.",
       },
       skills: {
-        // Skills Übersetzungen
+        technologies: 'Technologies',
+        skillsSet: 'Skills Set',
+        skillsDescription:
+          'A short introduction of your skills. Highlight your experience of  using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it is for you to keep up with the rapid changes in web development.',
+        anotherSkills: 'You need another skill?',
+        contactMeText: 'Feel free to contact me. I look forward to expanding on my previous knowledge.',
+        letsTalk: "Let's Talk",
       },
       projects: {
         // Projekt Übersetzungen
@@ -67,13 +73,21 @@ export class TranslationService {
         whoIAm: 'Wer ich bin',
         aboutMeHeader: 'Über mich',
         aboutText:
-          "Hallo, ich bin Adrian! Meine Reise begann mit einer Kindheitsfaszination für Computer und der Freude daran, Dinge zum Laufen zu bringen. Diese Leidenschaft hat mich zur Webentwicklung geführt, wo jeder Debugging-Erfolg dieses belohnende Gefühl der Leistung bringt.",
-        location: "Wohnhaft in Frankfurt am Main, offen für Remote-Arbeit.",
-        mindset: "Stets begeistert neue Technologien und Frameworks zu erkunden. Ich glaube an kontinuierliches Lernen und sehe jede Herausforderung als Chance, meine Fähigkeiten zu erweitern.",
-        approach: "Mein Ansatz verbindet analytisches Denken mit kreativer Problemlösung. Durch kollaborative Teamprojekte habe ich gelernt, beharrlich nach der elegantesten Lösung zu suchen. Jede Herausforderung ist eine Chance zu wachsen und meine Entwicklungsfähigkeiten zu verfeinern.",
+          'Hallo, ich bin Adrian! Meine Reise begann mit einer Kindheitsfaszination für Computer und der Freude daran, Dinge zum Laufen zu bringen. Diese Leidenschaft hat mich zur Webentwicklung geführt, wo jeder Debugging-Erfolg dieses belohnende Gefühl der Leistung bringt.',
+        location: 'Wohnhaft in Frankfurt am Main, offen für Remote-Arbeit.',
+        mindset:
+          'Stets begeistert neue Technologien und Frameworks zu erkunden. Ich glaube an kontinuierliches Lernen und sehe jede Herausforderung als Chance, meine Fähigkeiten zu erweitern.',
+        approach:
+          'Mein Ansatz verbindet analytisches Denken mit kreativer Problemlösung. Durch kollaborative Teamprojekte habe ich gelernt, beharrlich nach der elegantesten Lösung zu suchen. Jede Herausforderung ist eine Chance zu wachsen und meine Entwicklungsfähigkeiten zu verfeinern.',
       },
       skills: {
-        // Skills Übersetzungen
+        technologies: 'Technologien',
+        skillsSet: 'Fähigkeiten',
+        skillsDescription:
+          'Eine kurze Einführung in deine Fähigkeiten. Hervorhebe deine Erfahrung mit verschiedenen Front-End-Technologien und betone deine Offenheit für das Lernen und Anpassen an neue Technologien. Zeige, wie wichtig es für dich ist, mit den schnellen Änderungen in der Webentwicklung Schritt zu halten.',
+        anotherSkills: 'Du brauchst eine andere Fähigkeit?',
+        contactMeText: 'Kontaktiere mich gerne. Ich freue mich auf die Erweiterung meiner bisherigen Kenntnisse.',
+        letsTalk: "Lass' uns reden",
       },
       projects: {
         // Projekt Übersetzungen

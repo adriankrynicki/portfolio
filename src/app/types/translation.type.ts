@@ -25,7 +25,12 @@ export interface AboutMeTranslations {
 }
 
 export interface SkillsTranslations {
-  // Füge hier Skills-spezifische Übersetzungskeys hinzu
+  technologies: string;
+  skillsSet: string;
+  skillsDescription: string;
+  anotherSkills: string;
+  contactMeText: string;
+  letsTalk: string;
 }
 
 export interface ProjectsTranslations {
