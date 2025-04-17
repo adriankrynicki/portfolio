@@ -1,56 +1,69 @@
 <section id="skills">
+  <div class="background-decoration"></div>
   <div class="skills-text">
     <h3>{{ translate("technologies") }}</h3>
-    <div>
+    <div class="skills-text-container">
       <h2>{{ translate("skillsSet") }}</h2>
       <p>{{ translate("skillsDescription") }}</p>
-      <h4>{{ translate("anotherSkills") }}</h4>
+      <div class="another-skills-text">
+        <span>{{ translate("anotherSkills") }}</span>
+        <p>{{ translate("anotherSkillsColor") }}</p>
+      </div>
       <p>{{ translate("contactMeText") }}</p>
-      <button>{{ translate("letsTalk") }}</button>
+      <button class="lets-talk-button">
+        <div class="btn-content-wrapper">
+          <span>
+            {{ translate("letsTalk") }}
+          </span>
+          <span>
+            {{ translate("letsTalk") }}
+          </span>
+        </div>
+      </button>
     </div>
   </div>
   <div class="skills-icons">
-    <div>
+    <div class="icon-container">
       <img src="/assets/img/htmlIcon.png" alt="HTML" />
       <p>HTML</p>
     </div>
-    <div>
+    <div class="icon-container">
       <img src="/assets/img/cssIcon.png" alt="CSS" />
       <p>CSS</p>
     </div>
-    <div>
+    <div class="icon-container">
       <img src="/assets/img/javaScriptIcon.png" alt="JavaScript" />
       <p>JavaScript</p>
     </div>
-    <div>
+    <div class="icon-container">
       <img src="/assets/img/typeScriptIcon.png" alt="TypeScript" />
       <p>TypeScript</p>
     </div>
-    <div>
+    <div class="icon-container">
       <img src="/assets/img/angularIcon.png" alt="Angular" />
       <p>Angular</p>
     </div>
-    <div>
+    <div class="icon-container">
       <img src="/assets/img/firebaseIcon.png" alt="Firebase" />
       <p>Firebase</p>
     </div>
-    <div>
+    <div class="icon-container">
       <img src="/assets/img/gitIcon.png" alt="Git" />
       <p>Git</p>
     </div>
-    <div>
+    <div class="icon-container">
       <img src="/assets/img/restApiIcon.png" alt="Rest API" />
       <p>Rest API</p>
     </div>
-    <div>
+    <div class="icon-container">
       <img src="/assets/img/scrumIcon.png" alt="Scrum" />
       <p>Scrum</p>
     </div>
-    <div>
-      <div>
-        <img src="/assets/img/growthVector.png" alt="Growth Vector" />
-        <img src="/assets/img/growthHat.png" alt="Growth Hat" />
-        <img src="/assets/img/growthVector.png" alt="Growth Vector" />
+    <div class="icon-container">
+      <div class="growth-mindset-container">
+        <img class="growth-vector-left" src="/assets/img/growthVector.png" alt="Growth Vector" />
+        <img class="growth-hat" src="/assets/img/growthHat.png" alt="Growth Hat" />
+        <img class="growth-vector-right" src="/assets/img/growthVector.png" alt="Growth Vector" />
       </div>
       <p>Growth Mindset</p>
     </div>

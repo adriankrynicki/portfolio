@@ -45,10 +45,11 @@ export class TranslationService {
       },
       skills: {
         technologies: 'Technologies',
-        skillsSet: 'Skills Set',
+        skillsSet: 'Skill Set',
         skillsDescription:
           'A short introduction of your skills. Highlight your experience of  using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it is for you to keep up with the rapid changes in web development.',
-        anotherSkills: 'You need another skill?',
+        anotherSkills: 'You need',
+        anotherSkillsColor: 'another skill?',
         contactMeText: 'Feel free to contact me. I look forward to expanding on my previous knowledge.',
         letsTalk: "Let's Talk",
       },
@@ -86,6 +87,7 @@ export class TranslationService {
         skillsDescription:
           'Eine kurze Einführung in deine Fähigkeiten. Hervorhebe deine Erfahrung mit verschiedenen Front-End-Technologien und betone deine Offenheit für das Lernen und Anpassen an neue Technologien. Zeige, wie wichtig es für dich ist, mit den schnellen Änderungen in der Webentwicklung Schritt zu halten.',
         anotherSkills: 'Du brauchst eine andere Fähigkeit?',
+        anotherSkillsColor: 'Fähigkeit?',
         contactMeText: 'Kontaktiere mich gerne. Ich freue mich auf die Erweiterung meiner bisherigen Kenntnisse.',
         letsTalk: "Lass' uns reden",
       },

@@ -29,6 +29,7 @@ export interface SkillsTranslations {
   skillsSet: string;
   skillsDescription: string;
   anotherSkills: string;
+  anotherSkillsColor: string;
   contactMeText: string;
   letsTalk: string;
 }
