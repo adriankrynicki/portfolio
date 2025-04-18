@@ -72,7 +72,7 @@ section {
     cursor: pointer;
     overflow: hidden;
     position: relative;
- 
+
     &:hover {
       border: 1px solid $primary-color;
       transition: border 0.25s ease-in-out;
@@ -101,10 +101,10 @@ section {
 }
 
 @keyframes slideText {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
     transform: translateX(-100%);
   }
 }
@@ -176,7 +176,7 @@ section {
   width: 67px;
   height: 65px;
   transition: transform 0.25s ease-in-out;
-  
+
   &:hover {
     transform: scale(1.1);
   }
@@ -188,7 +188,7 @@ section {
     height: 54px;
     pointer-events: none;
   }
-  
+
   .growth-vector-right {
     position: absolute;
     bottom: 0;
@@ -198,7 +198,7 @@ section {
     height: 54px;
     pointer-events: none;
   }
-  
+
   .growth-hat {
     position: absolute;
     top: 9px;
@@ -208,9 +208,3 @@ section {
     pointer-events: none;
   }
 }
-
-
-
-
-
-
