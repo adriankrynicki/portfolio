@@ -4,7 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeroComponent } from './hero/hero.component';
 import { AboutMeComponent } from './aboutMe/aboutMe.component';
 import { SkillsComponent } from './skills/skills.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ProjectsComponent } from './projects/projects.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -14,7 +14,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     HeroComponent,
     AboutMeComponent,
     SkillsComponent,
-    PortfolioComponent,
+    ProjectsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

@@ -1,0 +1,67 @@
+<section id="projects">
+  <div class="portfolio-content">
+    <h3>Portfolio</h3>
+    <h1>Featured Projects</h1>
+    <p class="my-projects-text">
+      Explore a selection of my work here - Interact with projects to see my
+      skills in action.
+    </p>
+    <div class="project-cards-container">
+      <div class="project-cards-container-left">
+        <div
+          class="project-card"
+          (mouseenter)="showImage('assets/img/joinImage.png', 'top')"
+          (mouseleave)="hideImage()"
+        >
+          <h2>Join</h2>
+          <div class="project-card-technologies">
+            <p>JavaScript</p>
+            <span></span>
+            <p>HTML</p>
+            <span></span>
+            <p>CSS</p>
+            <span></span>
+            <p>Firebase</p>
+          </div>
+        </div>
+        <div
+          class="project-card"
+          (mouseenter)="showImage('assets/img/elPolloLocoImage.png', 'middle')"
+          (mouseleave)="hideImage()"
+        >
+          <h2>El Pollo Loco</h2>
+          <div class="project-card-technologies">
+            <p>JavaScript</p>
+            <span></span>
+            <p>HTML</p>
+            <span></span>
+            <p>CSS</p>
+          </div>
+        </div>
+        <div
+          class="project-card"
+          (mouseenter)="showImage('assets/img/daBubbleImage.png', 'bottom')"
+          (mouseleave)="hideImage()"
+        >
+          <h2>DA Bubble</h2>
+          <div class="project-card-technologies">
+            <p>Angular</p>
+            <span></span>
+            <p>TypeScript</p>
+            <span></span>
+            <p>Firebase</p>
+          </div>
+        </div>
+      </div>
+      <div class="display-image-container" [ngClass]="{
+        'justify-start': selectedPosition === 'top',
+        'justify-center': selectedPosition === 'middle',
+        'justify-end': selectedPosition === 'bottom'
+      }">
+        <div class="display-image" *ngIf="selectedImage">
+          <img [src]="selectedImage" alt="Project Preview" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

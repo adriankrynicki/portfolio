@@ -32,7 +32,9 @@
             "styles": [
               "src/styles.scss",
               "src/assets/fonts/roboto/roboto.css",
-              "src/assets/fonts/mulish/mulish.css"
+              "src/assets/fonts/mulish/mulish.css",
+              "src/assets/fonts/karla/karla.css",
+              "src/assets/fonts/firaCode/fireCode.css"
             ],
             "scripts": []
           },
@@ -92,7 +94,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/fonts/roboto/roboto.css",
+              "src/assets/fonts/mulish/mulish.css",
+              "src/assets/fonts/karla/karla.css",
+              "src/assets/fonts/firaCode/fireCode.css"
             ],
             "scripts": []
           }
