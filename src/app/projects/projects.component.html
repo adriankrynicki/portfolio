@@ -10,10 +10,14 @@
       <div class="project-cards-container-left">
         <div
           class="project-card"
-          (mouseenter)="showImage('assets/img/joinImage.png', 'top')"
+          (mouseenter)="showImage('assets/img/joinImg.png', 'top')"
           (mouseleave)="hideImage()"
+          (click)="openProjectDialog('Join')"
         >
-          <h2>Join</h2>
+          <div class="project-card-header">
+            <h2>Join</h2>
+            <span></span>
+          </div>
           <div class="project-card-technologies">
             <p>JavaScript</p>
             <span></span>
@@ -28,8 +32,12 @@
           class="project-card"
           (mouseenter)="showImage('assets/img/elPolloLocoImage.png', 'middle')"
           (mouseleave)="hideImage()"
+          (click)="openProjectDialog('El Pollo Loco')"
         >
-          <h2>El Pollo Loco</h2>
+          <div class="project-card-header">
+            <h2>El Pollo Loco</h2>
+            <span></span>
+          </div>
           <div class="project-card-technologies">
             <p>JavaScript</p>
             <span></span>
@@ -40,10 +48,14 @@
         </div>
         <div
           class="project-card"
-          (mouseenter)="showImage('assets/img/daBubbleImage.png', 'bottom')"
+          (mouseenter)="showImage('assets/img/daBubbleImg.png', 'bottom')"
           (mouseleave)="hideImage()"
+          (click)="openProjectDialog('DA Bubble')"
         >
-          <h2>DA Bubble</h2>
+          <div class="project-card-header">
+            <h2>DA Bubble</h2>
+            <span></span>
+          </div>
           <div class="project-card-technologies">
             <p>Angular</p>
             <span></span>
@@ -59,7 +71,10 @@
         'justify-end': selectedPosition === 'bottom'
       }">
         <div class="display-image" *ngIf="selectedImage">
-          <img [src]="selectedImage" alt="Project Preview" />
+          <div class="image-wrapper">
+            <img [src]="selectedImage" alt="Project Preview" />
+            <span class="shadow"></span>
+          </div>
         </div>
       </div>
     </div>

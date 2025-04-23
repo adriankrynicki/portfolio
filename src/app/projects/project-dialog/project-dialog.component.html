@@ -1,0 +1,44 @@
+<div class="dialog-container">
+  <button class="close-button" (click)="closeDialog()">×</button>
+  
+  <div class="project-content">
+    <div class="project-header">
+      <div class="project-number">{{ currentProject.id.toString().padStart(2, '0') }}</div>
+      <h1>{{ currentProject.name }}</h1>
+    </div>
+
+    <div class="project-description">
+      <h2>What is this project about?</h2>
+      <p>{{ currentProject.description }}</p>
+    </div>
+
+    <div class="project-technologies">
+      <div class="tech-icon" *ngFor="let tech of currentProject.technologies">
+        <img [src]="tech.icon" [alt]="tech.name">
+        <span>{{ tech.name }}</span>
+      </div>
+    </div>
+
+    <div class="project-links">
+      <a [href]="currentProject.links.github" target="_blank" class="link-button">
+        GitHub
+        <span class="arrow">→</span>
+      </a>
+      <a [href]="currentProject.links.live" target="_blank" class="link-button">
+        Live Test
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-preview">
+    <img [src]="currentProject.image" [alt]="currentProject.name + ' Preview'">
+  </div>
+
+  <div class="navigation" (click)="navigateToNextProject()">
+    <span class="next-project">
+      Next project
+      <span class="arrow">→</span>
+    </span>
+  </div>
+</div>

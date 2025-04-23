@@ -7,8 +7,8 @@ import { AboutMeTranslations } from '../types/translation.type';
   selector: 'app-about-me',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './aboutMe.component.html',
-  styleUrl: './aboutMe.component.scss'
+  templateUrl: './about-me.component.html',
+  styleUrl: './about-me.component.scss'
 })
 export class AboutMeComponent {
   constructor(private translationService: TranslationService) {}
