@@ -4,9 +4,9 @@ section {
   padding: 96px 96px 60px 96px;
   position: relative;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   background-color: $background-dark;
-  height: 80vh;
+  height: 100vh;
   gap: 96px;
   p {
     color: $text-color;
@@ -91,8 +91,14 @@ section {
     }
 
     &:hover {
+      border: 1px solid $primary-color;
+      transition: border 0.15s ease-in-out;
       .btn-content-wrapper {
         animation: slideText 1.5s linear infinite;
+      }
+      .btn-content-wrapper span {
+        color: $primary-color;
+        transition: color 0.15s ease-in-out;
       }
     }
   }
@@ -138,8 +144,9 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 10px;
+  margin-bottom: 30px;
+  max-width: 110px;
 
   img {
     width: 64px;
@@ -161,10 +168,8 @@ section {
 
 .skills-icons {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 150px);
-  gap: 27px;
+  grid-template-columns: repeat(auto-fill, 170px);
   width: 60%;
-  margin-top: 20px;
 }
 
 .growth-mindset-container {

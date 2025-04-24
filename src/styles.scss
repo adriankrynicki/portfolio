@@ -4,41 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-// Reset Material Typography
-.mat-mdc-typography {
-  h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-    letter-spacing: inherit;
-  }
-}
-
-// Überschreibe Material Typography
-.mat-body, .mat-body-2, .mat-typography .mat-body, .mat-typography .mat-body-2, .mat-typography {
-  font-family: inherit !important;
-  font-size: inherit !important;
-  font-weight: inherit !important;
-  line-height: inherit !important;
-  letter-spacing: inherit !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-// Reset Material Dialog
-.mat-mdc-dialog-container {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-// Reset Material Button
-.mat-mdc-button {
-  margin: 0 !important;
-  padding: 0 !important;
+  scroll-behavior: smooth;
 }
 
 // Variables
@@ -53,6 +19,8 @@ $gradient-overlay: linear-gradient(
   rgba(0, 0, 0, 0.9) 0%,
   rgba(0, 0, 0, 0) 25%
 );
+
+
 
 .roboto-font {
   font-family: 'Roboto', sans-serif;

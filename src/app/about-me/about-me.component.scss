@@ -85,7 +85,7 @@ section {
 }
 
 .about-me-header {
-  padding: 16px 32px 32px 32px;
+  padding: 32px;
   h3 {
     color: $primary-color;
     font-size: 64px;
@@ -107,7 +107,6 @@ section {
   padding: 0 32px 32px 17px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
   p {
     font-family: "Karla", sans-serif;
     font-size: 18px;

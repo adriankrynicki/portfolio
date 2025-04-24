@@ -36,11 +36,11 @@ export class ProjectDialogComponent {
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       image: 'assets/img/joinImg.png',
       technologies: [
-        { name: 'CSS', icon: 'assets/img/css.png' },
-        { name: 'HTML', icon: 'assets/img/html.png' },
-        { name: 'Firebase', icon: 'assets/img/firebase.png' },
-        { name: 'Angular', icon: 'assets/img/angular.png' },
-        { name: 'TypeScript', icon: 'assets/img/typescript.png' }
+        { name: 'CSS', icon: 'assets/img/cssTurquoise.png' },
+        { name: 'HTML', icon: 'assets/img/htmlTurquoise.png' },
+        { name: 'Firebase', icon: 'assets/img/firebaseTurquoise.png' },
+        { name: 'Angular', icon: 'assets/img/angularTurquoise.png' },
+        { name: 'TypeScript', icon: 'assets/img/typeScriptTurquoise.png' }
       ],
       links: {
         github: 'https://github.com/yourusername/join',
@@ -53,9 +53,9 @@ export class ProjectDialogComponent {
       description: 'A fun Jump-and-Run game based on object-oriented programming with JavaScript.',
       image: 'assets/img/game.png',
       technologies: [
-        { name: 'JavaScript', icon: 'assets/img/javascript.png' },
-        { name: 'HTML', icon: 'assets/img/html.png' },
-        { name: 'CSS', icon: 'assets/img/css.png' }
+        { name: 'JavaScript', icon: 'assets/img/javaScriptTurquoise.png' },
+        { name: 'HTML', icon: 'assets/img/htmlTurquoise.png' },
+        { name: 'CSS', icon: 'assets/img/cssTurquoise.png' }
       ],
       links: {
         github: 'https://github.com/yourusername/el-pollo-loco',
@@ -68,9 +68,9 @@ export class ProjectDialogComponent {
       description: 'A Slack-inspired chat application with real-time messaging and channel management.',
       image: 'assets/img/daBubbleImg.png',
       technologies: [
-        { name: 'Angular', icon: 'assets/img/angular.png' },
-        { name: 'TypeScript', icon: 'assets/img/typescript.png' },
-        { name: 'Firebase', icon: 'assets/img/firebase.png' }
+        { name: 'Angular', icon: 'assets/img/angularTurquoise.png' },
+        { name: 'TypeScript', icon: 'assets/img/typeScriptTurquoise.png' },
+        { name: 'Firebase', icon: 'assets/img/firebaseTurquoise.png' }
       ],
       links: {
         github: 'https://github.com/yourusername/da-bubble',
