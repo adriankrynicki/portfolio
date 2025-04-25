@@ -35,7 +35,15 @@ export interface SkillsTranslations {
 }
 
 export interface ProjectsTranslations {
-  // Füge hier Project-spezifische Übersetzungskeys hinzu
+  portfolio: string;
+  featuredProjects: string;
+  exploreText: string;
+  whatIsThisAbout: string;
+  nextProject: string;
+  liveTest: string;
+  joinDescription: string;
+  polloLocoDescription: string;
+  daBubbleDescription: string;
 }
 
 // Hauptstruktur der Übersetzungen

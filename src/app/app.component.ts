@@ -5,6 +5,7 @@ import { HeroComponent } from './hero/hero.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ReferencesComponent } from './references/references.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -15,6 +16,7 @@ import { ProjectsComponent } from './projects/projects.component';
     AboutMeComponent,
     SkillsComponent,
     ProjectsComponent,
+    ReferencesComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

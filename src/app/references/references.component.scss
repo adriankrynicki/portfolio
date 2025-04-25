@@ -1,0 +1,24 @@
+@import "../../styles.scss";
+
+section {
+    height: 100vh;
+    background-color: $background-dark;
+    padding: 0 96px 60px 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+        font-family: 'Fire Code', monospace;
+        font-weight: 700;
+        font-size: 32px;
+        color: $primary-color;
+        margin-bottom: 60px;
+    }
+}
+
+.navigation-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

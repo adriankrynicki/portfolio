@@ -54,7 +54,15 @@ export class TranslationService {
         letsTalk: "Let's Talk",
       },
       projects: {
-        // Projekt Übersetzungen
+        portfolio: 'Portfolio',
+        featuredProjects: 'Featured Projects',
+        exploreText: 'Explore a selection of my work here - Interact with projects to see my skills in action.',
+        whatIsThisAbout: 'What is this project about?',
+        nextProject: 'Next project',
+        liveTest: 'Live Test',
+        joinDescription: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+        polloLocoDescription: 'A fun Jump-and-Run game based on object-oriented programming with JavaScript.',
+        daBubbleDescription: 'A Slack-inspired chat application with real-time messaging and channel management.'
       },
     },
     de: {
@@ -92,7 +100,15 @@ export class TranslationService {
         letsTalk: "Lass' uns reden",
       },
       projects: {
-        // Projekt Übersetzungen
+        portfolio: 'Portfolio',
+        featuredProjects: 'Ausgewählte Projekte',
+        exploreText: 'Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.',
+        whatIsThisAbout: 'Worum geht es in diesem Projekt?',
+        nextProject: 'Nächstes Projekt',
+        liveTest: 'Live Test',
+        joinDescription: 'Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen.',
+        polloLocoDescription: 'Ein unterhaltsames Jump-and-Run-Spiel, basierend auf objektorientierter Programmierung mit JavaScript.',
+        daBubbleDescription: 'Eine von Slack inspirierte Chat-Anwendung mit Echtzeit-Messaging und Kanal-Management.'
       },
     },
   };

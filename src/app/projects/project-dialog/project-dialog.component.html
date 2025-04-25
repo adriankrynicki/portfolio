@@ -1,19 +1,20 @@
 <div class="project-container">
+  <div class="cursor-glow" #cursorGlow></div>
   <div class="close-button-container">
     <button class="close-button" (click)="closeDialog()">×</button>
   </div>
   <div class="project-content-container">
     <div class="project-content">
       <div class="project-header">
-        <div class="project-number">
+        <h2 class="project-number">
           {{ currentProject.id.toString().padStart(2, "0") }}
-        </div>
+        </h2>
         <h1>{{ currentProject.name }}</h1>
       </div>
 
       <div class="project-description">
-        <h2>What is this project about?</h2>
-        <p>{{ currentProject.description }}</p>
+        <h2>{{ translate('projects', 'whatIsThisAbout') }}</h2>
+        <p>{{ translate('projects', currentProject.description) }}</p>
       </div>
 
       <div class="project-technologies">
@@ -30,15 +31,15 @@
           class="link-button"
         >
           GitHub
-          <span class="arrow">→</span>
+          <span></span>
         </a>
         <a
           [href]="currentProject.links.live"
           target="_blank"
           class="link-button"
         >
-          Live Test
-          <span class="arrow">→</span>
+          {{ translate('projects', 'liveTest') }}
+          <span></span>
         </a>
       </div>
     </div>
@@ -51,8 +52,8 @@
   </div>
   <div class="navigation" (click)="navigateToNextProject()">
     <span class="next-project">
-      Next project
-      <span class="arrow">→</span>
+      {{ translate('projects', 'nextProject') }}
+      <span></span>
     </span>
   </div>
 </div>
