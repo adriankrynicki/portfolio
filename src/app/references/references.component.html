@@ -1,20 +1,56 @@
 <section>
-    <h2>What my colleagues say about me</h2>
-    <div class="quotes">
-        <img src="assets/img/quotes.png" alt="quotes">
-        <div class="quote-container">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-            <div>
-                <span></span>
-                <p>John Doe</p>
-            </div>
+  <h2>What my colleagues say about me</h2>
+  <div class="quotes">
+    <img src="assets/img/quotes.png" alt="quotes" />
+    <div class="quote-row">
+      <div class="quote-container left" *ngIf="testimonials.length > 1">
+        <p>{{ testimonials[leftIndex].text }}</p>
+        <div>
+          <span></span>
+          <p>
+            {{ testimonials[leftIndex].author }} -
+            {{ testimonials[leftIndex].role }}
+          </p>
         </div>
+      </div>
+      <div class="quote-container center">
+        <p>{{ testimonials[currentIndex].text }}</p>
+        <div>
+          <span></span>
+          <p>
+            {{ testimonials[currentIndex].author }} -
+            {{ testimonials[currentIndex].role }}
+          </p>
+        </div>
+      </div>
+      <div class="quote-container right" *ngIf="testimonials.length > 2">
+        <p>{{ testimonials[rightIndex].text }}</p>
+        <div>
+          <span></span>
+          <p>
+            {{ testimonials[rightIndex].author }} -
+            {{ testimonials[rightIndex].role }}
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="navigation-buttons">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-    </div>
+  </div>
+  <div class="navigation-buttons">
+    <img src="assets/img/arrow_back.png" alt="arrow-left" (click)="goLeft()" />
+    <ng-container *ngFor="let t of testimonials; let i = index">
+      <img
+        [src]="
+          i === currentIndex
+            ? 'assets/img/pointTurquoise.png'
+            : 'assets/img/pointWhite.png'
+        "
+        [alt]="i === currentIndex ? 'point-turquoise' : 'point-white'"
+      />
+    </ng-container>
+    <img
+      src="assets/img/arrow_forward.png"
+      alt="arrow-right"
+      (click)="goRight()"
+    />
+  </div>
 </section>
