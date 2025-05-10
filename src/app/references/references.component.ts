@@ -25,28 +25,58 @@ export class ReferencesComponent {
       author: 'A.Müller',
       role: 'Backend Developer',
     },
-    // Füge hier weitere Testimonials hinzu
+    {
+      text: 'Another great feedback...',
+      author: 'A.Müller',
+      role: 'Backend Developer',
+    },
+    {
+      text: 'Another great feedback...',
+      author: 'A.Müller',
+      role: 'Backend Developer',
+    },
+    {
+      text: 'Another great feedback...',
+      author: 'A.Müller',
+      role: 'Backend Developer',
+    },
+        {
+      text: 'Another great feedback...',
+      author: 'A.Müller',
+      role: 'Backend Developer',
+    },
+    {
+      text: 'Another great feedback...',
+      author: 'A.Müller',
+      role: 'Backend Developer',
+    },
   ];
 
   currentIndex = 0;
 
-  get leftIndex() {
-    return (
-      (this.currentIndex - 1 + this.testimonials.length) %
-      this.testimonials.length
-    );
-  }
-  get rightIndex() {
-    return (this.currentIndex + 1) % this.testimonials.length;
-  }
 
   goLeft() {
     this.currentIndex =
       (this.currentIndex - 1 + this.testimonials.length) %
       this.testimonials.length;
   }
-
   goRight() {
     this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
+  }
+
+  getTransform(index: number): string {
+    // -1: links, 0: mitte, 1: rechts, Rest: außerhalb
+    let pos = index - this.currentIndex;
+    // Für Endlos-Loop:
+    if (pos < -2) pos += this.testimonials.length;
+    if (pos > 2) pos -= this.testimonials.length;
+    return `translateX(${pos * 100}%)`;
+  }
+
+  getRelativePosition(index: number): number {
+    let pos = index - this.currentIndex;
+    if (pos < -2) pos += this.testimonials.length;
+    if (pos > 2) pos -= this.testimonials.length;
+    return pos;
   }
 }

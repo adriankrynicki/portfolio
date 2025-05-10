@@ -9,14 +9,16 @@ section {
   justify-content: center;
   align-items: center;
   gap: 48px;
+  overflow: hidden;
   h2 {
     font-family: "Fire Code", monospace;
     font-weight: 700;
     font-size: 32px;
     color: $primary-color;
   }
+
   .quotes {
-    
+    height: 41vh;
     width: 150%;
     position: relative;
     display: flex;
@@ -25,16 +27,31 @@ section {
     img {
       position: absolute;
       top: 0;
-      left: 53vw;
+      left: 51.4vw;
+      z-index: 999;
     }
   }
 }
 
+.quote-row {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40vh;
+  overflow: hidden;
+  gap: 32px;
+}
+
 .quote-container {
+  position: absolute;
+  top: 0;
+  left: 38%;
   border: 1px solid $primary-color;
   border-radius: 30px;
-
-  width: 55%;
+  height: 40vh;
+  width: 27%;
   color: $text-color;
   display: flex;
   flex-direction: column;
@@ -42,6 +59,10 @@ section {
   padding: 48px;
   font-family: "Karla", sans-serif;
   overflow: hidden;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s;
+  opacity: 0.7;
+  z-index: 1;
+  background-color: darken($background-dialog-green, 20%);
   div {
     display: flex;
     justify-content: space-between;
@@ -58,17 +79,31 @@ section {
     border-top: 1px solid $text-color;
     width: 80%;
   }
-  transition: background 0.9s, opacity 0.9s;
+  &.left {
+    transform: translateX(-20px) scale(0.9);
+    filter: blur(0.5px);
+  }
   &.center {
-    background-color: $background-dialog-green;
+    transform: scale(1.05);
     opacity: 1;
+    z-index: 2;
+    filter: none;
+    background-color: #57ffe342;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
   }
-  &.left,
   &.right {
-    background-color: darken($background-dialog-green, 10%);
-    opacity: 0.7;
+    transform: translateX(20px) scale(0.9);
     filter: blur(0.5px);
+  }
+  &.far-left {
+    transform: translateX(-200%) scale(0.8);
+    opacity: 0;
+    pointer-events: none;
+  }
+  &.far-right {
+    transform: translateX(200%) scale(0.8);
+    opacity: 0;
+    pointer-events: none;
   }
 }
 
@@ -81,12 +116,4 @@ section {
       cursor: pointer;
     }
   }
-}
-
-.quote-row {
-  display: flex;
-  gap: 24px;
-  justify-content: center;
-  align-items: flex-end;
-  width: 100%;
 }

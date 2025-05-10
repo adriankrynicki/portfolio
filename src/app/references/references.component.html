@@ -3,50 +3,31 @@
   <div class="quotes">
     <img src="assets/img/quotes.png" alt="quotes" />
     <div class="quote-row">
-      <div class="quote-container left" *ngIf="testimonials.length > 1">
-        <p>{{ testimonials[leftIndex].text }}</p>
+      <div
+        *ngFor="let testimonial of testimonials; let i = index"
+        class="quote-container"
+        [ngClass]="{
+          'far-left': getRelativePosition(i) === -2,
+          left: getRelativePosition(i) === -1,
+          center: getRelativePosition(i) === 0,
+          right: getRelativePosition(i) === 1,
+          'far-right': getRelativePosition(i) === 2
+        }"
+        [style.transform]="getTransform(i)"
+      >
+        <p>{{ testimonial.text }}</p>
         <div>
           <span></span>
-          <p>
-            {{ testimonials[leftIndex].author }} -
-            {{ testimonials[leftIndex].role }}
-          </p>
-        </div>
-      </div>
-      <div class="quote-container center">
-        <p>{{ testimonials[currentIndex].text }}</p>
-        <div>
-          <span></span>
-          <p>
-            {{ testimonials[currentIndex].author }} -
-            {{ testimonials[currentIndex].role }}
-          </p>
-        </div>
-      </div>
-      <div class="quote-container right" *ngIf="testimonials.length > 2">
-        <p>{{ testimonials[rightIndex].text }}</p>
-        <div>
-          <span></span>
-          <p>
-            {{ testimonials[rightIndex].author }} -
-            {{ testimonials[rightIndex].role }}
-          </p>
+          <p>{{ testimonial.author }} - {{ testimonial.role }}</p>
         </div>
       </div>
     </div>
   </div>
   <div class="navigation-buttons">
     <img src="assets/img/arrow_back.png" alt="arrow-left" (click)="goLeft()" />
-    <ng-container *ngFor="let t of testimonials; let i = index">
-      <img
-        [src]="
-          i === currentIndex
-            ? 'assets/img/pointTurquoise.png'
-            : 'assets/img/pointWhite.png'
-        "
-        [alt]="i === currentIndex ? 'point-turquoise' : 'point-white'"
-      />
-    </ng-container>
+    <img src="assets/img/pointTurquoise.png" alt="point-turquoise" />
+    <img src="assets/img/pointWhite.png" alt="point-white" />
+    <img src="assets/img/pointWhite.png" alt="point-white" />
     <img
       src="assets/img/arrow_forward.png"
       alt="arrow-right"
