@@ -1,0 +1,139 @@
+@import "../../styles.scss";
+
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 0 96px 0 96px;
+    background-color: $background-dark;
+    color: $text-color;
+}
+
+.contact-text {
+    width: 50vw;
+    display: flex;
+    margin-bottom: 100px;
+    flex-direction: column;
+    h3 {
+        font-size: 28px;
+        font-weight: 500;
+        color: $primary-color;
+        font-style: "Karla", sans-serif;
+    }
+    h2 {
+        font-size: 64px;
+        font-weight: 700;
+        color: $primary-color;
+        line-height: 1;   
+        margin: 20px 0 40px;
+    }
+    p {
+        font-family: "Karla", sans-serif;
+        font-size: 18px;
+    }
+    span {
+        color: $primary-color;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    button {
+        color: #ffffffa9;    
+        font-family: "Karla", sans-serif;   
+        font-size: 20px;
+        background-color: transparent;
+        border: 1px solid #ffffffa9;
+        border-radius: 100px;
+        max-width: 200px;
+        padding: 12px 24px;
+        align-self: center;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid $primary-color;
+    padding: 32px;
+    input {
+        border: none;
+        background-color: transparent;
+        color: $text-color;
+        font-family: "Karla", sans-serif;
+        font-size: 18px;
+        &:focus {
+            outline: none;
+        }
+    }
+    textarea {
+        border: none;
+        background-color: transparent;
+        color: $text-color;
+        font-family: "Karla", sans-serif;
+        font-size: 18px;
+        height: 30px;
+        &:focus {
+            outline: none;
+        }
+    }
+    label {
+        font-weight: 500;
+        font-size: 24px;
+        color: $primary-color;
+    }
+}
+
+.border-bottom {
+    border-bottom: 1px solid $primary-color;
+}
+
+.privacy-policy {
+    display: flex;
+    gap: 16px;
+    padding: 32px;
+    p {
+        font-size: 18px;
+    }
+    span {
+        font-size: 18px;
+        color: $primary-color;
+    }
+}
+
+.checkbox {
+    background-image: url("../../assets/img/check_box_outline_blank.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    &:hover {
+        background-image: url("../../assets/img/check_box_hover.png");
+        cursor: pointer;
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.checkbox-checked {
+    background-image: url("../../assets/img/check_box_checked.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    &:hover {
+        background-image: url("../../assets/img/check_box_checked_hover.png");
+        cursor: pointer;
+        width: 18px;
+        height: 18px;
+    }
+}

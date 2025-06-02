@@ -18,7 +18,6 @@ section {
   }
 
   .quotes {
-    height: 41vh;
     width: 150%;
     position: relative;
     display: flex;
@@ -27,7 +26,7 @@ section {
     img {
       position: absolute;
       top: 0;
-      left: 51.4vw;
+      left: 54vw;
       z-index: 999;
     }
   }
@@ -46,11 +45,10 @@ section {
 
 .quote-container {
   position: absolute;
-  top: 0;
-  left: 38%;
+  top: 8px;
   border: 1px solid $primary-color;
   border-radius: 30px;
-  height: 40vh;
+  height: 35vh;
   width: 27%;
   color: $text-color;
   display: flex;
@@ -59,7 +57,7 @@ section {
   padding: 48px;
   font-family: "Karla", sans-serif;
   overflow: hidden;
-  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s;
+  transition: all 0.6s linear;
   opacity: 0.7;
   z-index: 1;
   background-color: darken($background-dialog-green, 20%);
@@ -82,8 +80,11 @@ section {
   &.left {
     transform: translateX(-20px) scale(0.9);
     filter: blur(0.5px);
+    left: 30%;
+    opacity: 0.8;
   }
   &.center {
+    left: 38%;
     transform: scale(1.05);
     opacity: 1;
     z-index: 2;
@@ -92,28 +93,58 @@ section {
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
   }
   &.right {
+    left: 46%;
     transform: translateX(20px) scale(0.9);
     filter: blur(0.5px);
+    opacity: 0.8;
   }
-  &.far-left {
-    transform: translateX(-200%) scale(0.8);
-    opacity: 0;
-    pointer-events: none;
-  }
-  &.far-right {
-    transform: translateX(200%) scale(0.8);
-    opacity: 0;
-    pointer-events: none;
-  }
+}
+
+.opacity-0 {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .navigation-buttons {
   display: flex;
   align-items: center;
   gap: 24px;
-  img {
-    &:hover {
-      cursor: pointer;
-    }
+}
+
+.point {
+  width: 8px;
+  height: 8px;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.arrow {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 18px;
+  &:hover {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.arrow-back {
+  background-image: url("../../assets/img/arrow_back.png");
+  &:hover {
+    transform: translateX(-5px) scale(1.2);
+    background-image: url("../../assets/img/arrow_back_turquoise.png");
+  }
+}
+
+.arrow-forward {
+  background-image: url("../../assets/img/arrow_forward.png");
+  &:hover {
+    transform: translateX(5px) scale(1.2);
+    background-image: url("../../assets/img/arrow_forward_turquoise.png");
   }
 }

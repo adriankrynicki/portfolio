@@ -3,35 +3,44 @@
   <div class="quotes">
     <img src="assets/img/quotes.png" alt="quotes" />
     <div class="quote-row">
-      <div
-        *ngFor="let testimonial of testimonials; let i = index"
-        class="quote-container"
-        [ngClass]="{
-          'far-left': getRelativePosition(i) === -2,
-          left: getRelativePosition(i) === -1,
-          center: getRelativePosition(i) === 0,
-          right: getRelativePosition(i) === 1,
-          'far-right': getRelativePosition(i) === 2
-        }"
-        [style.transform]="getTransform(i)"
-      >
-        <p>{{ testimonial.text }}</p>
-        <div>
-          <span></span>
-          <p>{{ testimonial.author }} - {{ testimonial.role }}</p>
+      <ng-container *ngFor="let testimonial of testimonials; let i = index">
+        <div
+          class="opacity-0"
+          *ngIf="getRelativePosition(i) >= -2 && getRelativePosition(i) <= 2"
+          [ngClass]="{
+            'quote-container':
+              getRelativePosition(i) >= -1 && getRelativePosition(i) <= 1,
+            'far-left': getRelativePosition(i) === -2,
+            left: getRelativePosition(i) === -1,
+            center: getRelativePosition(i) === 0,
+            right: getRelativePosition(i) === 1,
+            'far-right': getRelativePosition(i) === 2
+          }"
+          [style.transform]="getTransform(i)"
+        >
+          <p>{{ testimonial.text }}</p>
+          <div>
+            <span></span>
+            <p>{{ testimonial.author }} - {{ testimonial.role }}</p>
+          </div>
         </div>
-      </div>
+      </ng-container>
     </div>
   </div>
   <div class="navigation-buttons">
-    <img src="assets/img/arrow_back.png" alt="arrow-left" (click)="goLeft()" />
-    <img src="assets/img/pointTurquoise.png" alt="point-turquoise" />
-    <img src="assets/img/pointWhite.png" alt="point-white" />
-    <img src="assets/img/pointWhite.png" alt="point-white" />
-    <img
-      src="assets/img/arrow_forward.png"
-      alt="arrow-right"
-      (click)="goRight()"
-    />
-  </div>
+    <div class="arrow arrow-back" (click)="goLeft()"></div>
+    <ng-container *ngFor="let testimonial of testimonials; let i = index">
+      <img
+        class="point"
+        [src]="
+          i === currentIndex
+            ? 'assets/img/pointTurquoise.png'
+            : 'assets/img/pointWhite.png'
+        "
+        [alt]="i === currentIndex ? 'point-turquoise' : 'point-white'"
+        (click)="goToIndex(i)"
+      />
+    </ng-container>
+    <div class="arrow arrow-forward" (click)="goRight()"></div>
+  </div>  
 </section>
