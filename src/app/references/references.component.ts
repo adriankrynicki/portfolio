@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslationService } from '../services/translation.service';
+import { ReferencesTranslations } from '../types/translation.type';
 
 @Component({
   selector: 'app-references',
@@ -11,39 +13,60 @@ import { CommonModule } from '@angular/common';
 export class ReferencesComponent {
   testimonials = [
     {
-      text: 'Lukas has proven to be a reliable group partner...',
-      author: 'H.Janisch',
-      role: 'Team Partner',
+      text_en: "Working with Lukas was a real pleasure. His attention to detail and willingness to help others made every project run smoothly. I would gladly collaborate with him again.",
+      text_de: "Die Zusammenarbeit mit Lukas war eine echte Freude. Seine Liebe zum Detail und seine Hilfsbereitschaft haben jedes Projekt reibungslos gemacht. Ich würde jederzeit wieder mit ihm arbeiten.",
+      author: "H. Janisch",
+      role: "Team Partner",
     },
     {
-      text: 'I had the good fortune of working with Lukas...',
-      author: 'T.Schulz',
-      role: 'Frontend Developer',
+      text_en: "Lukas is a true team player.",
+      text_de: "Lukas ist ein echter Teamplayer.",
+      author: "T. Schulz",
+      role: "Frontend Developer",
     },
     {
-      text: '1234111 3412344 34 12315154345 3453 454',
-      author: 'A.Müller',
-      role: 'Backend Developer',
+      text_en: "His technical skills are impressive, but what really stands out is his positive attitude and ability to motivate the team, even in challenging situations.",
+      text_de: "Seine technischen Fähigkeiten sind beeindruckend, aber besonders hervorzuheben ist seine positive Einstellung und die Fähigkeit, das Team auch in schwierigen Situationen zu motivieren.",
+      author: "A. Müller",
+      role: "Backend Developer",
     },
     {
-      text: 'adrfer vwe vew wv wv vw rvw  vwerwer rvew rwervwert wev wve vwe vwer wve wverewftwertv twervtewrd',
-      author: 'A.Müller',
-      role: 'Backend Developer',
+      text_en: "Always reliable and quick to find solutions.",
+      text_de: "Immer zuverlässig und schnell in der Lösungsfindung.",
+      author: "S. Becker",
+      role: "Project Manager",
     },
     {
-      text: 'SDVGFS SDFVSD SVF SDVFGSDFGS DVSD FV',
-      author: 'A.Müller',
-      role: 'Backend Developer',
+      text_en: "Lukas contributed many creative ideas to our project and was always open to feedback. His code quality is excellent.",
+      text_de: "Lukas hat viele kreative Ideen in unser Projekt eingebracht und war immer offen für Feedback. Seine Codequalität ist ausgezeichnet.",
+      author: "M. Schneider",
+      role: "Fullstack Developer",
     },
     {
-      text: '234234b2 424324 2 242424234 23',
-      author: 'A.Müller',
-      role: 'Backend Developer',
+      text_en: "Great communication and strong commitment.",
+      text_de: "Großartige Kommunikation und starkes Engagement.",
+      author: "J. Fischer",
+      role: "UX Designer",
     }
   ];
 
+  constructor(private translationService: TranslationService) {
+    this.translationService.currentLang$.subscribe((lang) => {
+      this.currentLang = lang;
+    });
+  }
+
+  translate(key: keyof ReferencesTranslations): string {
+    return this.translationService.getTranslation('references', key);
+  }
+
+  currentLang: string = 'en';
   currentIndex = 0;
   canMoveToNext = true;
+
+  public getTestimonialText(testimonial: any): string {
+    return testimonial['text_' + this.currentLang];
+  }
 
   private calculateShortestPath(currentIndex: number, targetIndex: number): number {
     const totalItems = this.testimonials.length;

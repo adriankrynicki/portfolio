@@ -27,6 +27,7 @@ section {
         color: $primary-color;
         line-height: 1;   
         margin: 20px 0 40px;
+        max-width: 500px;
     }
     p {
         font-family: "Karla", sans-serif;
@@ -104,9 +105,21 @@ form {
     p {
         font-size: 18px;
     }
+}
+
+.privacy-policy-text {
+    display: flex;
+    align-items: center;
+    font-family: "Karla", sans-serif;
     span {
         font-size: 18px;
         color: $primary-color;
+        margin: 0 8px 12px 8px;
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            color: $text-color;
+        }
     }
 }
 

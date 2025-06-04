@@ -1,5 +1,5 @@
 <section>
-  <h2>What my colleagues say about me</h2>
+  <h2>{{ translate('colleaguesOpinion') }}</h2>
   <div class="quotes">
     <img src="assets/img/quotes.png" alt="quotes" />
     <div class="quote-row">
@@ -18,7 +18,7 @@
           }"
           [style.transform]="getTransform(i)"
         >
-          <p>{{ testimonial.text }}</p>
+          <p>{{ getTestimonialText(testimonial) }}</p>
           <div>
             <span></span>
             <p>{{ testimonial.author }} - {{ testimonial.role }}</p>

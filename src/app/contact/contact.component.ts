@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslationService } from '../services/translation.service';
+import { ContactTranslations } from '../types/translation.type';
 
 @Component({
   selector: 'app-contact',
@@ -9,6 +11,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+  constructor(private translationService: TranslationService) {}
+
+  translate(key: keyof ContactTranslations): string {
+    return this.translationService.getTranslation('contact', key);
+  }
   checkboxChecked = false;
 
   toggleCheckbox() {

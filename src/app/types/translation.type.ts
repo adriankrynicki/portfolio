@@ -1,5 +1,5 @@
 export type Language = 'de' | 'en';
-export type Section = 'hero' | 'skills' | 'projects' | 'aboutMe';
+export type Section = 'hero' | 'skills' | 'projects' | 'aboutMe' | 'references' | 'contact';
 
 // Definiere die Struktur für jede Sektion
 export interface HeroTranslations {
@@ -46,18 +46,43 @@ export interface ProjectsTranslations {
   daBubbleDescription: string;
 }
 
-// Hauptstruktur der Übersetzungen
+export interface ReferencesTranslations {
+  colleaguesOpinion: string;
+}
+
+export interface ContactTranslations {
+  contacktMe: string;
+  letsWork: string;
+  gotProblem: string;
+  description: string;
+  needFrontendDeveloper: string;
+  letTalk: string;
+  yourName: string;
+  namePlaceholder: string;
+  yourEmail: string;
+  emailPlaceholder: string;
+  howCanIHelpYou: string;
+  messagePlaceholder: string;
+  privacyPolicy: string;
+  privacyPolicyPart1: string;
+  privacyPolicyPart2: string;
+  sayHello: string;
+}
 export interface Translations {
   en: {
     hero: HeroTranslations;
     aboutMe: AboutMeTranslations;
     skills: SkillsTranslations;
     projects: ProjectsTranslations;
+    references: ReferencesTranslations;
+    contact: ContactTranslations;
   };
   de: {
     hero: HeroTranslations;
     aboutMe: AboutMeTranslations;
     skills: SkillsTranslations;
     projects: ProjectsTranslations;
+    references: ReferencesTranslations;
+    contact: ContactTranslations;
   };
 }

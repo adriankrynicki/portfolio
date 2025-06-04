@@ -8,6 +8,8 @@ import {
   SkillsTranslations,
   ProjectsTranslations,
   AboutMeTranslations,
+  ReferencesTranslations,
+  ContactTranslations,
 } from '../types/translation.type';
 
 @Injectable({
@@ -64,6 +66,27 @@ export class TranslationService {
         polloLocoDescription: 'A fun Jump-and-Run game based on object-oriented programming with JavaScript.',
         daBubbleDescription: 'A Slack-inspired chat application with real-time messaging and channel management.'
       },
+      references: {
+        colleaguesOpinion: 'What my colleagues say about me',
+      },
+      contact: {
+        contacktMe: 'Contact me',
+        letsWork: 'Let\'s work together',
+        gotProblem: 'Got a problem to solve?',
+        description: 'I\'m an open-minded developer seeking new challenges and opportunities. With clear goals and a passion for innovation, I\'m ready to bring fresh perspectives and valuable solutions to your projects. Let\'s connect and explore how we can create something amazing together.',
+        needFrontendDeveloper: 'Need a Frontend Developer?',
+        letTalk: 'Let\'s talk!',
+        yourName: 'What\'s your name?',
+        namePlaceholder: 'Your name goes here',
+        yourEmail: 'What\'s your email?',
+        emailPlaceholder: 'youremail@example.com',
+        howCanIHelpYou: 'How can I help you?',
+        messagePlaceholder: 'Hello Adrian, I am interested in...',
+        privacyPolicy: 'privacy policy',
+        privacyPolicyPart1: 'I\'ve read the',
+        privacyPolicyPart2: 'and agree to processing of my data as outlined.',
+        sayHello: 'Say Hello ;D',
+      }
     },
     de: {
       hero: {
@@ -110,6 +133,27 @@ export class TranslationService {
         polloLocoDescription: 'Ein unterhaltsames Jump-and-Run-Spiel, basierend auf objektorientierter Programmierung mit JavaScript.',
         daBubbleDescription: 'Eine von Slack inspirierte Chat-Anwendung mit Echtzeit-Messaging und Kanal-Management.'
       },
+      references: {
+        colleaguesOpinion: 'Was meine Kollegen über mich sagen',
+      },
+      contact: { 
+        contacktMe: 'Kontaktiere mich',
+        letsWork: 'Lass\' uns zusammenarbeiten',
+        gotProblem: 'Hast du ein Problem zu lösen?',
+        description: 'Ich bin ein offener Entwickler, der neue Herausforderungen und Möglichkeiten sucht. Mit klaren Zielen und einer Leidenschaft für Innovation bin ich bereit, neue Perspektiven und wertvolle Lösungen für deine Projekte zu bringen. Lass uns verbinden und erkunden, wie wir zusammen etwas Großartiges schaffen können.',
+        needFrontendDeveloper: 'Brauchst du einen Frontend-Entwickler?',
+        letTalk: 'Sprich mich an!',
+        yourName: 'Was ist dein Name?',
+        namePlaceholder: 'Dein Name geht hier',
+        yourEmail: 'Was ist deine E-Mail?',
+        emailPlaceholder: 'deine-email@beispiel.com',
+        howCanIHelpYou: 'Wie kann ich dir helfen?',
+        messagePlaceholder: 'Hallo Adrian, ich bin interessiert an...',
+        privacyPolicy: 'Datenschutzrichtlinie',
+        privacyPolicyPart1: 'Ich habe die',
+        privacyPolicyPart2: 'gelesen und stimme der Verarbeitung meiner Daten gemäß der Erklärung zu.',
+        sayHello: 'Hallo ;D',
+      }
     },
   };
 
@@ -121,6 +165,8 @@ export class TranslationService {
   getTranslation(section: 'aboutMe', key: keyof AboutMeTranslations): string;
   getTranslation(section: 'skills', key: keyof SkillsTranslations): string;
   getTranslation(section: 'projects', key: keyof ProjectsTranslations): string;
+  getTranslation(section: 'references', key: keyof ReferencesTranslations): string;
+  getTranslation(section: 'contact', key: keyof ContactTranslations): string;
   getTranslation(section: Section, key: string): string {
     const currentLang = this.currentLang.value;
     const sectionTranslations = this.translations[currentLang][section];
